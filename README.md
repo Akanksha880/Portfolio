@@ -1,6 +1,29 @@
-# Akanksha Kotwal - Professional Portfolio & Resume
+# Akanksha Kotwal - Professional Portfolio
+
+![Homepage](./assets/homepage.png)
 
 Welcome to my personal portfolio website! This project showcases my skills, education, experience, projects, certificates, awards, and more as a third-year Computer Science and Engineering (CSE) student at MIET Jammu. Built with modern web technologies, this portfolio reflects my journey as a developer, innovator, and leader.
+
+
+
+## 📌 Overview
+This is a highly advanced and fully responsive website designed with modern UI/UX, animations, and detailed CSS & JavaScript features. It includes multiple sections such as Portfolio, About, Contact, Footer, and Protected Content.
+
+## 🚀 Features
+- 🌟 **Fully Responsive Design**
+- 🎨 **Advanced CSS & JavaScript Animations**
+- 🧩 **Interactive UI/UX Elements**
+- 📜 **Detailed Sections** (Portfolio, Contact, About, Footer, etc.)
+- 📌 **Protected Content**
+- ⚡ **Optimized for Performance & Speed**
+
+## 📂 Sections Preview
+- **About Page** ![About](./assets/aboutpage.png)
+- **Portfolio Section** ![Portfolio](./assets/portfoliosection.png)
+- **Contact & VA Section** ![Contact](./assets/contact&VA.png)
+- **Footer Section** ![Footer](./assets/footersection.png)
+- **Protected Content** ![Protected](./assets/protectedcontent.png)
+
 
 ## Table of Contents
 - [Overview](#overview)
@@ -104,6 +127,19 @@ Contributions are welcome! If you'd like to enhance this portfolio:
 
 Please ensure your code follows the existing style and structure.
 
+## 🔧 Installation
+```bash
+git clone https://github.com/Akanksha880/Portfolio.git
+cd your-repository
+```
+
+Open `index.html` in your browser or use Live Server.
+
+## 🎯 Usage
+- Customize the content in **HTML/CSS/JS** files.
+- Modify styles in `styles.css`.
+- Adjust functionality in `script.js`.
+
 ## Contact
 - **Name**: Akanksha Kotwal
 - **Email**: [Insert your email here]
@@ -118,6 +154,9 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ---
 
+```
+✨ **Developed by Tahir Naseer** ✨
+```
+
 *Created by Akanksha Kotwal | Last Updated: March 18, 2025*
-```
-```
+---
