@@ -585,7 +585,7 @@
          Home Section (Hero with Parallax & Animations)
          ==================================================== */
       #home {
-        background: url('/assets/akuteam.jpeg') center/cover no-repeat fixed;
+        background: url('./assets/akuteam.jpeg') center/cover no-repeat fixed;
         color: #fff;
         height: 90vh;
         position: relative;
