@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akanksha Kotwal - Professional Portfolio & Resume</title>
+  <!-- Font Awesome CDN for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+      <!-- Preloader -->
+  <div id="preloader">
+    <div class="spinner"></div>
+  </div>
+  <div class="background-animation" id="backgroundAnimation"></div>
+
+  <!-- Header & Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="logo"><a href="#home">&lt;Akanksha/&gt;</a></div>
+      <ul class="nav-links">
+        <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+        <li class="dropdown">
+          <a href="#about"><i class="fas fa-user"></i> About</a>
+          <div class="dropdown-content">
+            <a href="#about"><i class="fas fa-address-card"></i> Profile</a>
+            <a href="#education"><i class="fas fa-graduation-cap"></i> Education</a>
+            <a href="#experience"><i class="fas fa-briefcase"></i> Experience</a>
+            <a href="#skills"><i class="fas fa-code"></i> Skills</a>
+          </div>
+        </li>
+        <li><a href="#certificates"><i class="fas fa-certificate"></i> Certificates</a></li>
+        <li><a href="#awards"><i class="fas fa-trophy"></i> Awards</a></li>
+        <li><a href="#portfolio"><i class="fas fa-images"></i> Portfolio</a></li>
+        <li class="dropdown">
+          <a href="#projects"><i class="fas fa-tasks"></i> Projects</a>
+          <div class="dropdown-content">
+            <a href="#projects"><i class="fas fa-laptop-code"></i> Web</a>
+            <a href="#projects"><i class="fas fa-mobile-alt"></i> Mobile</a>
+            <a href="#projects"><i class="fas fa-flask"></i> Research</a>
+          </div>
+        </li>
+        <li><a href="#blog"><i class="fas fa-blog"></i> Blog</a></li>
+        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+        <li><a href="#team"><i class="fas fa-users"></i> Team</a></li>
+        <li><a href="#faq"><i class="fas fa-question-circle"></i> FAQ</a></li>
+      </ul>
+      <div class="mobile-menu-toggle" id="mobileMenuToggle"><i class="fas fa-bars"></i></div>
+      <button id="darkModeToggle"><i class="fas fa-moon"></i></button>
+    </nav>
+  </header>
+
+  <!-- Mobile Sidebar Navigation -->
+  <aside class="sidebar" id="sidebar">
+    <ul>
+      <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+      <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
+      <li><a href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
+      <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
+      <li><a href="#certificates"><i class="fas fa-certificate"></i> Certificates</a></li>
+      <li><a href="#awards"><i class="fas fa-trophy"></i> Awards</a></li>
+      <li><a href="#portfolio"><i class="fas fa-images"></i> Portfolio</a></li>
+      <li><a href="#projects"><i class="fas fa-tasks"></i> Projects</a></li>
+      <li><a href="#blog"><i class="fas fa-blog"></i> Blog</a></li>
+      <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+      <li><a href="#team"><i class="fas fa-users"></i> Team</a></li>
+      <li><a href="#faq"><i class="fas fa-question-circle"></i> FAQ</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Home Section -->
+    <section id="home">
+      <div class="hero-content">
+          <h1 class="google-glow">Welcome to my Port 16.3.25 </h1>
+          <p>Akanksha Kotwal | MIET Jammu | CSE Student | Innovator | Developer</p>
+          <a href="#about" class="btn"><i class="fas fa-arrow-down"></i> Discover More</a>
+      </div>
+  </section>
+  
+  <style>
+  .google-glow {
+      /* Center the text */
+      text-align: center;
+      
+      /* Google colors animation */
+      background: linear-gradient(
+          to right,
+          #4285F4 20%, /* Google Blue */
+          #DB4437 40%, /* Google Red */
+          #F4B400 60%, /* Google Yellow */
+          #0F9D58 80%  /* Google Green */
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      
+      /* Add glowing effect */
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.3),
+                   0 0 20px rgba(255, 255, 255, 0.2),
+                   0 0 30px rgba(66, 133, 244, 0.5);
+      
+      /* Smooth animation */
+      animation: glow 2s ease-in-out infinite;
+  }
+  
+  /* Glowing animation keyframes */
+  @keyframes glow {
+      0% {
+          text-shadow: 0 0 10px rgba(255, 255, 255, 0.3),
+                      0 0 20px rgba(255, 255, 255, 0.2),
+                      0 0 30px rgba(66, 133, 244, 0.5);
+      }
+      50% {
+          text-shadow: 0 0 20px rgba(255, 255, 255, 0.5),
+                      0 0 30px rgba(255, 255, 255, 0.4),
+                      0 0 40px rgba(66, 133, 244, 0.7);
+      }
+      100% {
+          text-shadow: 0 0 10px rgba(255, 255, 255, 0.3),
+                      0 0 20px rgba(255, 255, 255, 0.2),
+                      0 0 30px rgba(66, 133, 244, 0.5);
+      }
+  }
+  
+  /* Optional: Ensure the hero-content has proper positioning */
+  .hero-content {
+      position: relative;
+      z-index: 1;
+  }
+  </style>
+
+    <!-- About Section -->
+    <section id="about">
+      <h1>About Me</h1>
+      <div class="profile">
+        <div class="profile-img">
+          <img src="./assets/Anku.jpeg" alt="Profile Image" />
+        </div>
+        <div class="profile-details">
+          <h2>Akanksha Kotwal</h2>
+          <p>
+            I am a third-year Computer Science student possessing an exceptional proficiency in C programming and an
+            innate understanding of C++. Additionally, I have honed my SQL programming skills and exhibit a remarkable
+            command of data structures, design analysis, and algorithms. My participation as the President of IUCEE,
+            Secretary of ACM MIET Student Chapter,a member of GDSC Miet Jammu, and a former member of IEEE has enabled
+            me to develop strong leadership qualities and effective communication skills.
+
+          <p>I am always zealous about learning and readily embrace new challenges. My resolute spirit and commitment to
+            excellence make me a valuable asset in any academic or business setting.</p>
+          </p>
+          <p>
+            Connect with me professionally...
+            <!-- <a href="https://www.linkedin.com/in/akanksha-kotwal-b3b008256" target="_blank">
+              <i class="fab fa-linkedin"></i> Visit LinkedIn Profile
+            </a> -->
+          </p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/akanksha-kotwal-b3b008256" target="_blank"><i
+                class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Education Section -->
+    <section id="education">
+      <h1>Education</h1>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>Bachelor of Technology (CSE)</h3>
+          <span>MIET Jammu | 2022 - Present</span>
+          <p>
+            Currently pursuing my undergraduate degree in <b style="background: linear-gradient(to right, rgb(40, 83, 82), rgb(135, 12, 223)); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent;">
+    Computer Science and Engineering
+  </b> with a focus on web and
+            software development, AI, and emerging technologies.
+          </p>
+        </div>
+        <div class="timeline-item">
+          <h3>Senior Secondary School (12th - Non-Medical)</h3>
+          <span>SP Smart School, Jammu (JK Board) | 2020 - 2022</span>
+          <p>
+            Completed my senior secondary education in Non-Medical (Physics, Chemistry, Mathematics), achieving an
+            overall score of <b style="background: linear-gradient(to right, rgb(43, 0, 255), rgb(255, 0, 255)); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent;">
+    83.3%
+  </b>.
+          </p>
+        </div>
+        <div class="timeline-item">
+          <h3>Secondary School (10th)</h3>
+          <span>SP Smart School, Jammu (JK Board) | 2018 - 2020</span>
+          <p>
+            Completed my secondary education with a focus on all major subjects, achieving an overall score of <b style="background: linear-gradient(to right, rgb(43, 0, 255), rgb(255, 0, 255)); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent;">
+    97%
+  </b>.
+          </p>
+        </div>
+        <div class="timeline-item">
+          <h3>8th Grade</h3>
+          <span>SP Smart School, Jammu (JK Board) | 20 - 2017</span>
+          <p>
+            Achieved a remarkable <b style="background: linear-gradient(to right, rgb(43, 0, 255), rgb(255, 0, 255)); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent;">
+    92%
+  </b> in my 8th grade exams, laying a strong foundation for my academic progress.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Experience Section -->
+    <section id="experience">
+      <h1>Experience</h1>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>Secretary</h3>
+          <span>MIET ACM Student Chapter | Aug 2024 - Present</span>
+          <p>Providing executive support and managing administrative responsibilities.</p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>President</h3>
+          <span>IUCEE MIET Student Chapter | Mar 2024 - Present</span>
+          <p>Leading the chapter, managing teams, and fostering leadership skills.</p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Joint Secretary</h3>
+          <span>IUCEE MIET Student Chapter | Jul 2023 - Mar 2024</span>
+          <p>Oversaw leadership and communication initiatives.</p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>NSS Volunteer</h3>
+          <span>National Service Scheme | Dec 2022 - Present</span>
+          <p>Contributing to community service and social development programs.</p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Student Member</h3>
+          <span>Google Developer Student Clubs MIET | Oct 2023 - Aug 2024</span>
+          <p>Explored cloud computing and Google Cloud Platform technologies.</p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Student Member</h3>
+          <span>IEEE SB MIET JAMMU | Dec 2022 - Mar 2024</span>
+          <p>Engaged in IEEE activities and technology discussions.</p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Intern - Software Developer</h3>
+          <span>ABC Tech Solutions | Summer 2023</span>
+          <p>Developed responsive web applications and contributed to a major product redesign with an agile team.</p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Freelance Developer</h3>
+          <span>2022 - Present</span>
+          <p>Offering freelance web development and software solutions to startups and small businesses.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <h1>My Skills</h1>
+      <div class="skills-container">
+        <div class="skill-card" data-skill="C Programming" data-level="95">
+          <div class="skill-icon"><i class="fas fa-code"></i></div>
+          <div class="skill-info">
+            <h3>C Programming</h3>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 0%;"></div>
+              <span class="progress-text">30%</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill-card" data-skill="HTML" data-level="95">
+          <div class="skill-icon"><i class="fab fa-html5"></i></div>
+          <div class="skill-info">
+            <h3>HTML</h3>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 0%;"></div>
+              <span class="progress-text">40%</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill-card" data-skill="CSS" data-level="90">
+          <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+          <div class="skill-info">
+            <h3>CSS</h3>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 0%;"></div>
+              <span class="progress-text">25%</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill-card" data-skill="JavaScript" data-level="85">
+          <div class="skill-icon"><i class="fab fa-js"></i></div>
+          <div class="skill-info">
+            <h3>JavaScript</h3>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 0%;"></div>
+              <span class="progress-text">8%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-card" data-skill="Leadership" data-level="90">
+          <div class="skill-icon"><i class="fas fa-users-cog"></i></div>
+          <div class="skill-info">
+            <h3>Leadership</h3>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 0%;"></div>
+              <span class="progress-text">55%</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill-card" data-skill="Communication" data-level="88">
+          <div class="skill-icon"><i class="fas fa-comments"></i></div>
+          <div class="skill-info">
+            <h3>Communication</h3>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 0%;"></div>
+              <span class="progress-text">78%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- Certificates Section -->
+<section id="certificates">
+  <h1>Certificates</h1>
+  <div class="certificates-grid">
+    <div class="certificate-item" data-modal="certificate1">
+      <div class="certificate-image-container">
+        <img src="./assets/certaku.jpeg" alt="Python Programming" />
+      </div>
+      <div class="certificate-info">
+        <h2>Python Programming Certification</h2>
+        <p>Completed a comprehensive course on Python programming from Coursera, mastering data structures and algorithms.</p>
+        <div class="certificate-buttons">
+          <a href="https://media.licdn.com/dms/image/v2/D5622AQESKSGxtKM07g/feedshare-shrink_2048_1536/B56ZVxUhqKGoAo-/0/1741362964112?e=1744848000&v=beta&t=sbgnEG094U-UO-9GkElmUdx8JJxUzfoWqx1agDlJJh4" class="btn btn-view">View Details</a>
+          <a href="https://media.licdn.com/dms/image/v2/D5622AQESKSGxtKM07g/feedshare-shrink_2048_1536/B56ZVxUhqKGoAo-/0/1741362964112?e=1744848000&v=beta&t=sbgnEG094U-UO-9GkElmUdx8JJxUzfoWqx1agDlJJh4" class="btn btn-demo">Live Demo</a>
+        </div>
+      </div>
+    </div>
+    <div class="certificate-item" data-modal="certificate2">
+      <div class="certificate-image-container">
+        <img src="./assets/ankucert2.jpeg" alt="Web Development Bootcamp" />
+      </div>
+      <div class="certificate-info">
+        <h2>Web Development Bootcamp</h2>
+        <p>Earned from Udemy for building responsive websites using HTML, CSS, JavaScript, and React.</p>
+        <div class="certificate-buttons">
+          <a href="https://media.licdn.com/dms/image/v2/D5622AQHG23E-FRZKpQ/feedshare-shrink_2048_1536/B56ZUFIhO_HQAo-/0/1739547880610?e=1744848000&v=beta&t=glPM_A50PYxcxxp357qPKHfj0QIwcVT33FS8Kx0LaLE" class="btn btn-view">View Details</a>
+          <a href="https://media.licdn.com/dms/image/v2/D5622AQHG23E-FRZKpQ/feedshare-shrink_2048_1536/B56ZUFIhO_HQAo-/0/1739547880610?e=1744848000&v=beta&t=glPM_A50PYxcxxp357qPKHfj0QIwcVT33FS8Kx0LaLE" class="btn btn-demo">Live Demo</a>
+        </div>
+      </div>
+    </div>
+    <!-- New Certificates for MIET Jammu CSE Student -->
+    <div class="certificate-item" data-modal="certificate3">
+      <div class="certificate-image-container">
+        <img src="./assets/cert1.jpeg" alt="Ethical Hacking" />
+      </div>
+      <div class="certificate-info">
+        <h2>Ethical Hacking Basics</h2>
+        <p>Completed a certification from EC-Council, learning penetration testing and network security fundamentals.</p>
+        <div class="certificate-buttons">
+          <a href="#" class="btn btn-view">View Details</a>
+          <a href="#" class="btn btn-demo">Live Demo</a>
+        </div>
+      </div>
+    </div>
+    <div class="certificate-item" data-modal="certificate4">
+      <div class="certificate-image-container">
+        <img src="./assets/cert2.jpeg" alt="AI Foundations" />
+      </div>
+      <div class="certificate-info">
+        <h2>AI Foundations by IBM</h2>
+        <p>Awarded for completing IBM’s course on artificial intelligence, covering machine learning basics and applications.</p>
+        <div class="certificate-buttons">
+          <a href="#" class="btn btn-view">View Details</a>
+          <a href="#" class="btn btn-demo">Live Demo</a>
+        </div>
+      </div>
+    </div>
+    <div class="certificate-item" data-modal="certificate5">
+      <div class="certificate-image-container">
+        <img src="./assets/cert3.jpeg" alt="MIET Coding Workshop" />
+      </div>
+      <div class="certificate-info">
+        <h2>MIET Coding Workshop 2023</h2>
+        <p>Participated in a 3-day coding workshop at MIET Jammu, focusing on competitive programming techniques.</p>
+        <div class="certificate-buttons">
+          <a href="#" class="btn btn-view">View Details</a>
+          <a href="#" class="btn btn-demo">Live Demo</a>
+        </div>
+      </div>
+    </div>
+    <div class="certificate-item" data-modal="certificate6">
+      <div class="certificate-image-container">
+        <img src="./assets/cert4.jpeg" alt="Google Cloud Essentials" />
+      </div>
+      <div class="certificate-info">
+        <h2>Google Cloud Essentials</h2>
+        <p>Earned from Google Cloud for understanding cloud computing concepts and deploying basic applications.</p>
+        <div class="certificate-buttons">
+          <a href="#" class="btn btn-view">View Details</a>
+          <a href="#" class="btn btn-demo">Live Demo</a>
+        </div>
+      </div>
+    </div>
+    <div class="certificate-item" data-modal="certificate7">
+      <div class="certificate-image-container">
+        <img src="./assets/cert5.jpeg" alt="Data Science with Python" />
+      </div>
+      <div class="certificate-info">
+        <h2>Data Science with Python</h2>
+        <p>Completed a course from Simplilearn, mastering data analysis and visualization using Python libraries.</p>
+        <div class="certificate-buttons">
+          <a href="#" class="btn btn-view">View Details</a>
+          <a href="#" class="btn btn-demo">Live Demo</a>
+        </div>
+      </div>
+    </div>
+    <div class="certificate-item" data-modal="certificate8">
+      <div class="certificate-image-container">
+        <img src="./assets/cert6.jpeg" alt="MIET Hackathon Participation" />
+      </div>
+      <div class="certificate-info">
+        <h2>MIET Hackathon 2024 Participation</h2>
+        <p>Received for contributing to a team project during MIET Jammu’s annual hackathon event.</p>
+        <div class="certificate-buttons">
+          <a href="#" class="btn btn-view">View Details</a>
+          <a href="#" class="btn btn-demo">Live Demo</a>
+        </div>
+      </div>
+    </div>
+    <div class="certificate-item" data-modal="certificate9">
+      <div class="certificate-image-container">
+        <img src="./assets/cert7.jpeg" alt="Machine Learning Specialization" />
+      </div>
+      <div class="certificate-info">
+        <h2>Machine Learning Specialization</h2>
+        <p>Earned from Coursera (Stanford Online) for completing a series on supervised and unsupervised learning.</p>
+        <div class="certificate-buttons">
+          <a href="#" class="btn btn-view">View Details</a>
+          <a href="#" class="btn btn-demo">Live Demo</a>
+        </div>
+      </div>
+    </div>
+    <div class="certificate-item" data-modal="certificate10">
+      <div class="certificate-image-container">
+        <img src="./assets/cert8.jpeg" alt="Cybersecurity Workshop" />
+      </div>
+      <div class="certificate-info">
+        <h2>Cybersecurity Workshop at MIET</h2>
+        <p>Attended a hands-on workshop at MIET Jammu on ethical hacking and network defense strategies.</p>
+        <div class="certificate-buttons">
+          <a href="#" class="btn btn-view">View Details</a>
+          <a href="#" class="btn btn-demo">Live Demo</a>
+        </div>
+      </div>
+    </div>
+    <div class="certificate-item" data-modal="certificate11">
+      <div class="certificate-image-container">
+        <img src="./assets/cert9.jpeg" alt="Java Programming" />
+      </div>
+      <div class="certificate-info">
+        <h2>Java Programming Certification</h2>
+        <p>Completed an Oracle-endorsed course on Java, focusing on object-oriented programming and application development.</p>
+        <div class="certificate-buttons">
+          <a href="#" class="btn btn-view">View Details</a>
+          <a href="#" class="btn btn-demo">Live Demo</a>
+        </div>
+      </div>
+    </div>
+    <div class="certificate-item" data-modal="certificate12">
+      <div class="certificate-image-container">
+        <img src="./assets/cert10.jpeg" alt="Database Management" />
+      </div>
+      <div class="certificate-info">
+        <h2>Database Management with SQL</h2>
+        <p>Earned from Udemy for mastering SQL queries, database design, and MySQL administration.</p>
+        <div class="certificate-buttons">
+          <a href="#" class="btn btn-view">View Details</a>
+          <a href="#" class="btn btn-demo">Live Demo</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Awards Section -->
+<section id="awards">
+  <h1>Awards</h1>
+  <div class="awards-grid">
+    <div class="award-item" data-modal="award1">
+      <img src="./assets/awrd1.jpeg" alt="MIET Coding Star" />
+      <div class="award-info">
+        <h2>MIET Coding Star 2023</h2>
+        <p>Received for outstanding performance in MIET Jammu’s inter-departmental coding challenge.</p>
+        <div class="award-buttons">
+          <a href="#" class="btn btn-view">View Details</a>
+          <a href="#" class="btn btn-demo">Live Demo</a>
+        </div>
+      </div>
+    </div>
+    <div class="award-item" data-modal="award2">
+      <img src="./assets/awrd2.jpeg" alt="Best Web Developer" />
+      <div class="award-info">
+        <h2>Best Web Developer Award 2024</h2>
+        <p>Awarded at MIET Tech Fest for creating an innovative student portal web application.</p>
+        <div class="award-buttons">
+          <a href="#" class="btn btn-view">View Details</a>
+          <a href="#" class="btn btn-demo">Live Demo</a>
+        </div>
+      </div>
+    </div>
+    <!-- New Awards for MIET Jammu CSE Student -->
+    <div class="award-item" data-modal="award3">
+      <img src="./assets/awrd3.jpeg" alt="MIET CodeFest Winner" />
+      <div class="award-info">
+        <h2>MIET CodeFest 2024 Winner</h2>
+        <p>Secured 1st place in MIET Jammu’s annual coding competition for solving complex algorithmic problems.</p>
+        <div class="award-buttons">
+          <a href="#" class="btn btn-view">View Details</a>
+          <a href="#" class="btn btn-demo">Live Demo</a>
+        </div>
+      </div>
+    </div>
+    <div class="award-item" data-modal="award4">
+      <img src="./assets/awrd4.jpeg" alt="Hackathon Champion" />
+      <div class="award-info">
+        <h2>TechHack 2023 Champion</h2>
+        <p>Led a team to victory in a regional hackathon organized at MIET Jammu, developing an innovative web app.</p>
+        <div class="award-buttons">
+          <a href="#" class="btn btn-view">View Details</a>
+          <a href="#" class="btn btn-demo">Live Demo</a>
+        </div>
+      </div>
+    </div>
+    <div class="award-item" data-modal="award5">
+      <img src="./assets/awrd5.jpeg" alt="Best AI Project" />
+      <div class="award-info">
+        <h2>Best AI Project Award</h2>
+        <p>Recognized by MIET faculty for developing an AI-powered chatbot for campus assistance.</p>
+        <div class="award-buttons">
+          <a href="#" class="btn btn-view">View Details</a>
+          <a href="#" class="btn btn-demo">Live Demo</a>
+        </div>
+      </div>
+    </div>
+    <div class="award-item" data-modal="award6">
+      <img src="./assets/awrd6.jpeg" alt="Cybersecurity Excellence" />
+      <div class="award-info">
+        <h2>Cybersecurity Excellence Award</h2>
+        <p>Awarded for designing a network security tool during MIET’s Tech Symposium 2024.</p>
+        <div class="award-buttons">
+          <a href="#" class="btn btn-view">View Details</a>
+          <a href="#" class="btn btn-demo">Live Demo</a>
+        </div>
+      </div>
+    </div>
+    <div class="award-item" data-modal="award7">
+      <img src="./assets/awrd7.jpeg" alt="Academic Excellence" />
+      <div class="award-info">
+        <h2>Academic Excellence Award</h2>
+        <p>Honored by MIET Jammu for topping the CSE branch in the 2023-24 semester exams.</p>
+        <div class="award-buttons">
+          <a href="#" class="btn btn-view">View Details</a>
+          <a href="#" class="btn btn-demo">Live Demo</a>
+        </div>
+      </div>
+    </div>
+    <div class="award-item" data-modal="award8">
+      <img src="./assets/awrd8.jpeg" alt="Innovator of the Year" />
+      <div class="award-info">
+        <h2>Innovator of the Year 2024</h2>
+        <p>Received at MIET Jammu for a groundbreaking ML-based placement prediction system.</p>
+        <div class="award-buttons">
+          <a href="#" class="btn btn-view">View Details</a>
+          <a href="#" class="btn btn-demo">Live Demo</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Portfolio Section -->
+<section id="portfolio">
+  <h1>Portfolio</h1>
+  <div class="portfolio-grid">
+    <div class="portfolio-item" data-modal="portfolio1">
+      <img src="./assets/port1.jpeg" alt="Project 1" />
+      <div class="portfolio-info">
+        <h2>Advanced web application</h2>
+        <p>Advanced web application with modern UI/UX design.</p>
+        <div class="portfolio-buttons">
+          <a href="#" class="btn btn-view">View Details</a>
+          <a href="#" class="btn btn-demo">Live Demo</a>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio-item" data-modal="portfolio2">
+      <img src="./assets/port2.jpeg" alt="Project 2" />
+      <div class="portfolio-info">
+        <h2>Innovative mobile app</h2>
+        <p>Innovative mobile solution with responsive design.</p>
+        <div class="portfolio-buttons">
+          <a href="#" class="btn btn-view">View Details</a>
+          <a href="#" class="btn btn-demo">Live Demo</a>
+        </div>
+      </div>
+    </div>
+    <!-- New Projects Related to CSE Branch at MIET Jammu -->
+    <div class="portfolio-item" data-modal="portfolio3">
+      <img src="./assets/port3.jpeg" alt="MIET Student Portal" />
+      <div class="portfolio-info">
+        <h2>MIET Student Portal</h2>
+        <p>A web-based platform for MIET Jammu students to access timetables, grades, and notices.</p>
+        <div class="portfolio-buttons">
+          <a href="#" class="btn btn-view">View Details</a>
+          <a href="#" class="btn btn-demo">Live Demo</a>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio-item" data-modal="portfolio4">
+      <img src="./assets/port4.jpeg" alt="MIET Network Security" />
+      <div class="portfolio-info">
+        <h2>MIET Network Security Tool</h2>
+        <p>A cybersecurity application to monitor and secure MIET’s internal network.</p>
+        <div class="portfolio-buttons">
+          <a href="#" class="btn btn-view">View Details</a>
+          <a href="#" class="btn btn-demo">Live Demo</a>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio-item" data-modal="portfolio5">
+      <img src="./assets/port5.jpeg" alt="Smart Attendance System" />
+      <div class="portfolio-info">
+        <h2>Smart Attendance System</h2>
+        <p>An AI-powered facial recognition system for automated attendance at MIET Jammu.</p>
+        <div class="portfolio-buttons">
+          <a href="#" class="btn btn-view">View Details</a>
+          <a href="#" class="btn btn-demo">Live Demo</a>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio-item" data-modal="portfolio6">
+      <img src="./assets/port6.jpeg" alt="Placement Predictor" />
+      <div class="portfolio-info">
+        <h2>MIET Placement Predictor</h2>
+        <p>An ML-based tool to predict placement outcomes for MIET CSE students based on skills and grades.</p>
+        <div class="portfolio-buttons">
+          <a href="#" class="btn btn-view">View Details</a>
+          <a href="#" class="btn btn-demo">Live Demo</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal -->
+<div class="modal">
+  <div class="modal-content">
+    <span class="modal-close">×</span>
+    <img src="" alt="Full View">
+    <h2 class="modal-title"></h2>
+    <p class="modal-description"></p>
+  </div>
+</div>
+
+<!-- Projects Section -->
+<section id="projects">
+  <h1>Projects</h1>
+  <div class="filter-tabs">
+    <button class="filter-btn active" data-filter="all"><i class="fas fa-globe"></i> All</button>
+    <button class="filter-btn" data-filter="web-development"><i class="fas fa-laptop-code"></i> Web Development</button>
+    <button class="filter-btn" data-filter="cybersecurity"><i class="fas fa-shield-alt"></i> Cybersecurity</button>
+    <button class="filter-btn" data-filter="ai-ml"><i class="fas fa-brain"></i> AI & ML</button>
+  </div>
+  <div class="projects-grid">
+    <!-- Original Projects Reassigned -->
+    <div class="project-item" data-category="web-development">
+      <img src="./assets/proj1.jpeg" alt="Web Project" />
+      <div class="project-info">
+        <h3>Web Project Alpha</h3>
+        <p>Full-stack web application with modern design and functionality.</p>
+      </div>
+    </div>
+    <div class="project-item" data-category="web-development">
+      <img src="./assets/proj2.jpeg" alt="Mobile Project" />
+      <div class="project-info">
+        <h3>Mobile App Beta</h3>
+        <p>An innovative mobile app with an intuitive user experience.</p>
+      </div>
+    </div>
+    <div class="project-item" data-category="ai-ml">
+      <img src="./assets/proj3.jpeg" alt="Research Project" />
+      <div class="project-info">
+        <h3>Research Gamma</h3>
+        <p>A research project focused on emerging technologies and AI.</p>
+      </div>
+    </div>
+    <div class="project-item" data-category="web-development">
+      <img src="./assets/proj4.jpeg" alt="Portfolio Website" />
+      <div class="project-info">
+        <h3>Personal Portfolio Website</h3>
+        <p>A responsive portfolio website showcasing my skills, projects.</p>
+      </div>
+    </div>
+    <div class="project-item" data-category="web-development">
+      <img src="./assets/proj5.jpg" alt="Task Manager App" />
+      <div class="project-info">
+        <h3>Task Manager Mobile App</h3>
+        <p>A cross-platform mobile app for task management, featuring reminders.</p>
+      </div>
+    </div>
+    <div class="project-item" data-category="ai-ml">
+      <img src="./assets/cert6.jpeg" alt="Algorithm Optimization" />
+      <div class="project-info">
+        <h3>Algorithm Optimization Study</h3>
+        <p>A research project analyzing the efficiency of sorting algorithms.</p>
+      </div>
+    </div>
+    <!-- New Web Development Projects -->
+    <div class="project-item" data-category="web-development">
+      <img src="./assets/port7.jpeg" alt="E-commerce Platform" />
+      <div class="project-info">
+        <h3>E-commerce Web Platform</h3>
+        <p>A scalable online shopping platform with payment integration and user authentication.</p>
+      </div>
+    </div>
+    <div class="project-item" data-category="web-development">
+      <img src="./assets/port8.jpeg" alt="Social Media Dashboard" />
+      <div class="project-info">
+        <h3>Social Media Dashboard</h3>
+        <p>A web app to manage and analyze multiple social media accounts in one place.</p>
+      </div>
+    </div>
+    <!-- New Cybersecurity Projects -->
+    <div class="project-item" data-category="cybersecurity">
+      <img src="./assets/proj9.jpg" alt="Intrusion Detection System" />
+      <div class="project-info">
+        <h3>Intrusion Detection System</h3>
+        <p>A cybersecurity tool using machine learning to detect network intrusions.</p>
+      </div>
+    </div>
+    <div class="project-item" data-category="cybersecurity">
+      <img src="./assets/proj10.jpg" alt="Password Manager" />
+      <div class="project-info">
+        <h3>Secure Password Manager</h3>
+        <p>A web-based tool for generating, storing, and encrypting user passwords.</p>
+      </div>
+    </div>
+    <!-- New AI & ML Projects -->
+    <div class="project-item" data-category="ai-ml">
+      <img src="./assets/proj11.jpg" alt="AI Chatbot" />
+      <div class="project-info">
+        <h3>AI-Powered Chatbot</h3>
+        <p>A conversational AI model trained for customer support automation.</p>
+      </div>
+    </div>
+    <div class="project-item" data-category="ai-ml">
+      <img src="./assets/proj12.jpg" alt="Stock Price Predictor" />
+      <div class="project-info">
+        <h3>Stock Price Predictor</h3>
+        <p>An ML-based system to predict stock prices using historical data.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+   <!-- Team Section -->
+<section id="team">
+  <h1>Meet the Team</h1>
+  <div class="team-grid">
+    <div class="team-member">
+      <img src="./assets/anku1.jpeg" alt="Akanksha Kotwal" />
+      <h3>Akanksha Kotwal</h3>
+      <p>CEO | Model Institute of Engineering and Technology Jammu, Jammu & Kashmir, India</p>
+      <a href="https://www.linkedin.com/in/akanksha-kotwal-b3b008256" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn Profile</a>
+    </div>
+    <div class="team-member">
+      <img src="./assets/team.jpeg" alt="Harleen Kour" />
+      <h3>Harleen Kour</h3>
+      <p>Project Collaborator | Student at Baba Ghulam Shah Badshah University Rajauri, Jammu & Kashmir, India</p>
+      <a href="https://www.linkedin.com/in/harleen-kaur-a1574a24b" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn Profile</a>
+    </div>
+    <div class="team-member">
+      <img src="./assets/team2.jpeg" alt="Harshdeep kour" />
+      <h3>Harshdeeep Kour</h3>
+      <p>Technical Lead | Student at Model Institute of Engineering and Technology Jammu, Jammu & Kashmir, India</p>
+      <a href="https://www.linkedin.com/in/harshdeep-kour-67b72a291" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn Profile</a>
+    </div>
+    <div class="team-member">
+      <img src="./assets/team3.jpeg" alt="Pragati" />
+      <h3>Priya Singh</h3>
+      <p>UI/UX Designer | Student at Model Institute of Engineering and Technology Jammu, Jammu & Kashmir, India</p>
+      <a href="https://www.linkedin.com/in/pragati-5496a0293/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn Profile</a>
+    </div>
+  </div>
+</section>
+    <!-- FAQ Section -->
+    <section id="faq">
+      <h1>Frequently Asked Questions</h1>
+      <div class="accordion-item">
+        <div class="accordion-header"><i class="fas fa-lightbulb"></i> What inspired this website?</div>
+        <div class="accordion-content">
+          <p>
+            This website is a culmination of my academic journey, professional aspirations, and a passion for technology.
+            It showcases my projects, research, and experiences as a MIET Jammu CSE student.
+          </p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header"><i class="fas fa-hands-helping"></i> How can I collaborate or connect?</div>
+        <div class="accordion-content">
+          <p>
+            You can connect with me via the contact form or directly through my LinkedIn profile.
+          </p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header"><i class="fas fa-code"></i> What programming languages are you most proficient in?</div>
+        <div class="accordion-content">
+          <p>
+            I am highly proficient in C and C++, with strong skills in SQL, HTML, CSS, and JavaScript. I am also continuously learning and exploring new languages and frameworks to broaden my expertise.
+          </p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header"><i class="fas fa-briefcase"></i> What kind of projects are you interested in working on?</div>
+        <div class="accordion-content">
+          <p>
+            I am passionate about projects involving web development, software engineering, and emerging technologies like AI and machine learning. I also enjoy collaborating on innovative ideas that solve real-world problems.
+          </p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header"><i class="fas fa-trophy"></i> What is your most proud achievement so far?</div>
+        <div class="accordion-content">
+          <p>
+            I am particularly proud of my leadership roles as President of the IUCEE MIET Student Chapter and Secretary of the ACM MIET Student Chapter, where I honed my organizational and communication skills while fostering a collaborative environment.
+          </p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header"><i class="fas fa-book"></i> How do you stay updated with the latest technology trends?</div>
+        <div class="accordion-content">
+          <p>
+            I regularly follow tech blogs, participate in webinars, and engage with communities like GDSC and IEEE. Additionally, I explore online courses and read research papers to stay informed about advancements in the field.
+          </p>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- Blog Section -->
+<section id="blog">
+  <h1>Blog</h1>
+  <div class="blog-post" data-modal="blog1">
+    <h2>Innovations in Web Development</h2>
+    <span class="post-date">Posted on: 2025-01-15</span>
+    <p>
+      Explore the latest trends, techniques, and cutting-edge practices that are shaping the future of web development.
+    </p>
+    <a href="#" class="read-more"><i class="fas fa-arrow-right"></i> Read More</a>
+  </div>
+  <div class="blog-post" data-modal="blog2">
+    <h2>The Future of Software Engineering</h2>
+    <span class="post-date">Posted on: 2025-02-20</span>
+    <p>
+      An in-depth exploration of emerging practices in software engineering, addressing innovative methodologies and future trends.
+    </p>
+    <a href="#" class="read-more"><i class="fas fa-arrow-right"></i> Read More</a>
+  </div>
+  <div class="blog-post" data-modal="blog3">
+    <h2>Lessons in Leadership: My Journey as IUCEE President</h2>
+    <span class="post-date">Posted on: 2025-03-10</span>
+    <p>
+      Reflecting on my experience leading the IUCEE MIET Student Chapter, I share key lessons on teamwork, decision-making, and fostering innovation in a student community.
+    </p>
+    <a href="#" class="read-more"><i class="fas fa-arrow-right"></i> Read More</a>
+  </div>
+  <div class="blog-post" data-modal="blog4">
+    <h2>The Power of Data Structures in Solving Real-World Problems</h2>
+    <span class="post-date">Posted on: 2025-04-05</span>
+    <p>
+      A deep dive into how data structures like trees, graphs, and hash tables can optimize solutions for real-world challenges, with examples from my own projects.
+    </p>
+    <a href="#" class="read-more"><i class="fas fa-arrow-right"></i> Read More</a>
+  </div>
+  <div class="blog-post" data-modal="blog5">
+    <h2>Balancing Academics and Extracurriculars: A Student’s Guide</h2>
+    <span class="post-date">Posted on: 2025-05-12</span>
+    <p>
+      Sharing my strategies for managing time effectively as a CSE student while staying active in student organizations and pursuing personal projects.
+    </p>
+    <a href="#" class="read-more"><i class="fas fa-arrow-right"></i> Read More</a>
+  </div>
+  <div class="blog-post" data-modal="blog6">
+    <h2>Getting Started with Open-Source Contributions</h2>
+    <span class="post-date">Posted on: 2025-06-18</span>
+    <p>
+      A beginner-friendly guide to contributing to open-source projects, including tips on finding the right projects, understanding GitHub workflows, and making your first pull request.
+    </p>
+    <a href="#" class="read-more"><i class="fas fa-arrow-right"></i> Read More</a>
+  </div>
+  <div class="blog-post" data-modal="blog7">
+    <h2>Exploring the Role of AI in Everyday Applications</h2>
+    <span class="post-date">Posted on: 2025-07-25</span>
+    <p>
+      An overview of how artificial intelligence is transforming daily life, from smart assistants to recommendation systems, and what this means for the future of technology.
+    </p>
+    <a href="#" class="read-more"><i class="fas fa-arrow-right"></i> Read More</a>
+  </div>
+</section>
+
+
+
+<section id="contact">
+  <div class="contact-container">
+    <div class="contact-left">
+      <h1>Contact Me</h1>
+      <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
+        <label for="contactName"><i class="fas fa-user"></i> Name:</label>
+        <input type="text" id="contactName" placeholder="Enter your name here" name="name" required />
+
+        <label for="contactEmail"><i class="fas fa-envelope"></i> Email:</label>
+        <input type="email" id="contactEmail" placeholder="Enter your email here" name="email" required />
+
+        <label for="contactPhone"><i class="fas fa-phone"></i> Phone:</label>
+        <input 
+          type="tel" 
+          id="contactPhone" 
+          name="phone" 
+          pattern="(\+91|\+92|\+880|\+977|\+94|\+975|\+960)?[6-9][0-9]{9}" 
+          placeholder="Type here +919876543210" 
+          title="Enter a valid number (e.g., +919876543210 or 9876543210)" 
+          required 
+        />
+
+        <label for="contactMessage"><i class="fas fa-comment"></i> Message:</label>
+        <textarea id="contactMessage" placeholder="Enter your message here" name="message" rows="5" required></textarea>
+
+        <button type="submit" id="submitBtn">
+          <i class="fas fa-paper-plane"></i> Send Message
+        </button>
+        <div id="progressBar" class="progress-bar" style="display: none;">
+          <div class="progress-fill"></div>
+        </div>
+      </form>
+
+      <!-- Thank You Popup -->
+      <div id="thankYouPopup" class="popup" style="display: none;">
+        <div class="popup-content">
+          <h3>Thank You!</h3>
+          <p>Your message has been sent successfully.</p>
+          <button onclick="closePopup()">Close</button>
+        </div>
+      </div>
+    </div>
+    <div class="contact-right">
+      <div class="assistant-container">
+        <iframe src='https://my.spline.design/particles-3f65a1139ee9bbe91049b2e48237db92/' frameborder='0' width='100%' height='80%'></iframe>
+        <button class="click-here-btn" id="assistantTrigger">Click Here</button>
+        <div id="inputWrapper">
+          <input id="userInput" type="text" placeholder="Ask me anything...">
+          <i id="sendIcon" class="fas fa-paper-plane"></i>
+          <i id="micIcon" class="fas fa-microphone"></i>
+        </div>
+        <div class="chat-container" id="chatContainer" style="display: none;"></div>
+        <div class="gender-selection" id="genderSelection" style="display: none;">
+          <button id="maleAssistant" class="gender-btn active">Male</button>
+          <button id="femaleAssistant" class="gender-btn">Female</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  </main>
+
+  <!-- Chatbot -->
+  <div class="chatbot-container" id="chatbotContainer">
+    <div class="chatbot-header">
+      <h3>Chatbot Assistant</h3>
+      <button id="closeChatbot"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="chatbot-body" id="chatbotBody">
+      <div class="chatbot-options">
+        <div class="chatbot-option" data-response="contact">How can I contact you?</div>
+        <div class="chatbot-option" data-response="projects">What projects have you worked on?</div>
+        <div class="chatbot-option" data-response="skills">What are your skills?</div>
+        <div class="chatbot-option" data-response="availability">Are you available for work?</div>
+      </div>
+    </div>
+  </div>
+  <button class="chatbot-toggle" id="chatbotToggle"><i class="fas fa-comment-dots"></i></button>
+
+
+
+  <!-- Global Modal (for Portfolio & Blog Read More) -->
+  <div class="modal" id="globalModal">
+    <div class="modal-content">
+      <span class="modal-close" id="modalClose"><i class="fas fa-times"></i></span>
+      <div id="modalBody">
+        <!-- Dynamic content will be injected here -->
+      </div>
+    </div>
+  </div>
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="back-to-top">
+    <span class="arrow"><i class="fas fa-arrow-up"></i></span>
+    <div class="runner-container">
+      <div class="runner"></div>
+    </div>
+  </button>
+
+  <footer id="footer">
+    <div class="footer-particles">
+      <span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span>
+    </div>
+    <div class="wave-layer"></div>
+    <div class="wave-layer"></div>
+    <div class="footer-content">
+      <div class="footer-grid">
+        <div class="footer-logo-section">
+          <div class="footer-logo">
+          <img src="./assets/Anku.jpeg" alt="your image" class="footer-logo"></div>
+          <p>I have expertise in C, C++, SQL, data structures, algorithms, leadership, communication, and problem-solving skills.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Explore</h3>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Connect</h3>
+          <div class="social-links">
+            <a href="#" class="social-icon github" data-tooltip="GitHub">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.373 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.6.111.82-.26.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-icon linkedin" data-tooltip="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0zM7.12 20.45H3.56V9.06h3.56v11.39zM5.34 7.55c-1.14 0-2.06-.92-2.06-2.06s.92-2.06 2.06-2.06 2.06.92 2.06 2.06-.92 2.06-2.06 2.06zm15.11 12.9h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.39V9.06h3.41v1.56h.05c.48-.91 1.65-1.87 3.39-1.87 3.62 0 4.29 2.38 4.29 5.48v6.22z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-icon twitter" data-tooltip="Twitter">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M24 4.557a9.83 9.83 0 01-2.828.775 4.932 4.932 0 002.165-2.724 9.864 9.864 0 01-3.127 1.195 4.916 4.916 0 00-8.379 4.482A13.978 13.978 0 011.671 3.149 4.916 4.916 0 003.194 9.72a4.902 4.902 0 01-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 01-2.224.084 4.917 4.917 0 004.6 3.417A9.867 9.867 0 010 21.543a13.978 13.978 0 007.548 2.212c9.057 0 14.009-7.502 14.009-13.986 0-.213-.005-.425-.014-.636A10.025 10.025 0 0024 4.557z"/>
+              </svg>
+            </a>
+          </div>
+          <div class="newsletter-form">
+            <input type="email" placeholder="Subscribe to our newsletter">
+            <button>Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Copyright © 2025 Dev Minds. This Website Owner is <a href="#about">Akanksha Kotwal</a>.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="./js/script.js"></script>
+    
+</body>
+</html>
