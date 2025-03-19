@@ -4,7 +4,7 @@
 
 Welcome to my personal portfolio website! This project showcases my skills, education, experience, projects, certificates, awards, and more as a third-year Computer Science and Engineering (CSE) student at MIET Jammu. Built with modern web technologies, this portfolio reflects my journey as a developer, innovator, and leader.
 
-
+🔗 **Live Demo:** [Click Here](https://akanksha880.github.io/Portfolio/)
 
 ## 📌 Overview
 This is a highly advanced and fully responsive website designed with modern UI/UX, animations, and detailed CSS & JavaScript features. It includes multiple sections such as Portfolio, About, Contact, Footer, and Protected Content.
@@ -91,7 +91,7 @@ portfolio/
      ```bash
      npx live-server
      ```
-
+     
 4. **Dependencies**: No additional installations are required as all external resources (e.g., Font Awesome) are loaded via CDNs.
 
 ## Usage
