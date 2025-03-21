@@ -1,6 +1,6 @@
 # Akanksha Kotwal - Professional Portfolio
 
-![Homepage](./assets/homepage.png)
+![Homepage](./assets/homelgo.png)
 
 Welcome to my personal portfolio website! This project showcases my skills, education, experience, projects, certificates, awards, and more as a third-year Computer Science and Engineering (CSE) student at MIET Jammu. Built with modern web technologies, this portfolio reflects my journey as a developer, innovator, and leader.
 
