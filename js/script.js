@@ -1,12 +1,16 @@
 document.addEventListener('DOMContentLoaded', function () {
-    /* Preloader Fade Out */
-    window.addEventListener('load', function () {
-      const preloader = document.getElementById('preloader');
-      if (preloader) {
-        preloader.style.opacity = '0';
-        setTimeout(() => { preloader.style.display = 'none'; }, 800);
-      }
-    });
+   // Preloader Fade Out
+window.addEventListener('load', function () {
+  const preloader = document.getElementById('preloader');
+  if (preloader) {
+    // Add the 'hide' class to trigger the fade-out transition
+    preloader.classList.add('hide');
+    // Ensure the preloader is removed from the DOM after the transition
+    setTimeout(() => {
+      preloader.style.display = 'none';
+    }, 800); // Matches the transition duration in CSS
+  }
+});
   
     /* Mobile Sidebar Toggle with Advanced Animation */
     const mobileMenuToggle = document.getElementById('mobileMenuToggle');
@@ -90,25 +94,26 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }
   
-    /* Website Protection */
     function addWebsiteProtection() {
+      // Inject CSS styles for advanced popups
       const style = document.createElement('style');
       style.textContent = `
+        /* Base Popup Styles */
         .custom-popup {
           position: fixed;
           top: 0;
           left: 0;
           width: 100%;
           height: 100%;
-          background: rgba(0, 0, 0, 0.7);
+          background: rgba(0, 0, 0, 0.6);
           display: flex;
           justify-content: center;
           align-items: center;
           opacity: 0;
           visibility: hidden;
-          transition: opacity 0.4s ease;
-          z-index: 1000;
-          perspective: 1000px;
+          transition: opacity 0.5s ease;
+          z-index: 9999;
+          backdrop-filter: blur(5px);
         }
         .custom-popup.show {
           opacity: 1;
@@ -116,228 +121,333 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         .popup-content {
           background: rgba(255, 255, 255, 0.1);
-          backdrop-filter: blur(10px);
+          backdrop-filter: blur(15px);
           border: 1px solid rgba(255, 255, 255, 0.2);
-          border-radius: 20px;
-          padding: 30px;
-          max-width: 450px;
+          border-radius: 15px;
+          padding: 20px 30px;
+          max-width: 400px;
           width: 90%;
-          box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 107, 107, 0.3);
+          box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
           text-align: center;
-          transform: rotateY(-90deg);
-          transition: transform 0.6s ease, opacity 0.4s ease;
           position: relative;
-          overflow: hidden;
+          transform: scale(0.8);
+          transition: transform 0.5s ease, opacity 0.5s ease;
         }
         .custom-popup.show .popup-content {
-          transform: rotateY(0deg);
+          transform: scale(1);
           opacity: 1;
         }
-        .popup-content::before {
-          content: '';
-          position: absolute;
-          top: -50%;
-          left: -50%;
-          width: 200%;
-          height: 200%;
-          background: linear-gradient(45deg, rgba(255, 107, 107, 0.2), rgba(78, 205, 196, 0.2), rgba(255, 107, 107, 0.2));
-          animation: glowRotate 6s linear infinite;
-          z-index: -1;
-        }
-        @keyframes glowRotate {
-          0% { transform: rotate(0deg); }
-          100% { transform: rotate(360deg); }
-        }
         .popup-icon {
-          font-size: 50px;
-          color: #ff6b6b;
-          margin-bottom: 20px;
-          text-shadow: 0 0 10px rgba(255, 107, 107, 0.8);
-          animation: pulse 1.5s infinite;
+          position: absolute;
+          top: -30px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 60px;
+          height: 60px;
+          background: #ff4d4d;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-shadow: 0 5px 15px rgba(255, 77, 77, 0.5);
         }
-        @keyframes pulse {
-          0% { transform: scale(1); }
-          50% { transform: scale(1.1); }
-          100% { transform: scale(1); }
+        .popup-icon i {
+          font-size: 30px;
+          color: #fff;
+          text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+          animation: shake 1.5s infinite;
+        }
+        @keyframes shake {
+          0%, 100% { transform: rotate(0deg); }
+          25% { transform: rotate(-10deg); }
+          75% { transform: rotate(10deg); }
         }
         .popup-content p {
-          font-size: 20px;
+          font-size: 18px;
           color: #fff;
-          margin: 0 0 25px 0;
-          font-family: 'Arial', sans-serif;
+          margin: 40px 0 20px;
+          font-family: 'Montserrat', sans-serif;
           text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
         }
         .popup-close {
-          background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+          background: #333;
           color: #fff;
           border: none;
-          padding: 12px 25px;
-          border-radius: 50px;
+          padding: 10px 25px;
+          border-radius: 5px;
           font-size: 16px;
+          font-weight: 600;
           cursor: pointer;
-          position: relative;
-          overflow: hidden;
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .popup-close::before {
-          content: '';
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          width: 0;
-          height: 0;
-          background: rgba(255, 255, 255, 0.3);
-          border-radius: 50%;
-          transform: translate(-50%, -50%);
-          transition: width 0.4s ease, height 0.4s ease;
-        }
-        .popup-close:hover::before {
-          width: 200px;
-          height: 200px;
+          transition: background 0.3s ease, transform 0.3s ease;
         }
         .popup-close:hover {
+          background: #ff4d4d;
           transform: translateY(-3px);
-          box-shadow: 0 5px 15px rgba(255, 107, 107, 0.5);
+        }
+        /* Unique Popup Variants */
+        .popup-content.type-1 .popup-icon { background: #ff4d4d; }
+        .popup-content.type-2 .popup-icon { background: #ff9500; }
+        .popup-content.type-3 .popup-icon { background: #ffcc00; }
+        .popup-content.type-4 .popup-icon { background: #00cc99; }
+        .popup-content.type-5 .popup-icon { background: #3399ff; }
+        .popup-content.type-6 .popup-icon { background: #cc33ff; }
+        .popup-content.type-7 .popup-icon { background: #ff6699; }
+        .popup-content.type-8 .popup-icon { background: #66ccff; }
+        .popup-content.type-9 .popup-icon { background: #ff3366; }
+        .popup-content.type-10 .popup-icon { background: #33cc33; }
+        .popup-content.type-11 .popup-icon { background: #ff66cc; }
+        .popup-content.type-12 .popup-icon { background: #00cccc; }
+        .popup-content.type-13 .popup-icon { background: #ff9933; }
+        .popup-content.type-14 .popup-icon { background: #cc66ff; }
+        .popup-content.type-15 .popup-icon { background: #66ff99; }
+        .popup-content.type-16 .popup-icon { background: #ffcc66; }
+        .popup-content.type-17 .popup-icon { background: #33ccff; }
+        .popup-content.type-18 .popup-icon { background: #ff3399; }
+        .popup-content.type-19 .popup-icon { background: #99cc33; }
+        .popup-content.type-20 .popup-icon { background: #ff66ff; }
+        .popup-content.type-21 .popup-icon { background: #33ffcc; }
+        .popup-content.type-22 .popup-icon { background: #ff3333; }
+        /* Watermark */
+        .watermark {
+          position: fixed;
+          bottom: 15px;
+          right: 15px;
+          font-size: 16px;
+          z-index: 1000;
         }
         .watermark a {
-          color: #000;
+          color: #fff;
           text-decoration: none;
-          opacity: 0.5;
-          cursor: pointer;
+          opacity: 0.6;
           transition: opacity 0.3s ease, color 0.3s ease;
         }
         .watermark a:hover {
           opacity: 1;
-          color: #ff6b6b;
+          color: #ff4d4d;
           text-decoration: underline;
-        }
-        /* Progress Popup Styles */
-        .assistant-progress-popup {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          background: rgba(255, 255, 255, 0.9);
-          padding: 15px 25px;
-          border-radius: 10px;
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          opacity: 0;
-          visibility: hidden;
-          transition: opacity 0.3s ease;
-          z-index: 100;
-        }
-        .dark-mode .assistant-progress-popup {
-          background: rgba(45, 55, 72, 0.9);
-        }
-        .assistant-progress-popup.active {
-          opacity: 1;
-          visibility: visible;
-        }
-        .assistant-progress-spinner {
-          width: 20px;
-          height: 20px;
-          border: 3px solid var(--primary-color);
-          border-top: 3px solid transparent;
-          border-radius: 50%;
-          animation: spin 1s linear infinite;
-        }
-        @keyframes spin {
-          0% { transform: rotate(0deg); }
-          100% { transform: rotate(360deg); }
-        }
-        .assistant-progress-popup p {
-          margin: 0;
-          font-size: 1rem;
-          color: #333;
-        }
-        .dark-mode .assistant-progress-popup p {
-          color: #e4e7ec;
         }
       `;
       document.head.appendChild(style);
-  
-      function showCustomPopup(message, iconClass) {
+    
+      // Function to show popup with unique styles and messages
+      function showCustomPopup(message, iconClass, typeClass = '') {
         const popup = document.createElement('div');
         popup.className = 'custom-popup';
         popup.innerHTML = `
-          <div class="popup-content">
-            <i class="${iconClass} popup-icon"></i>
+          <div class="popup-content ${typeClass}">
+            <div class="popup-icon"><i class="${iconClass}"></i></div>
             <p>${message}</p>
             <button class="popup-close">Close</button>
           </div>
         `;
         document.body.appendChild(popup);
-  
+    
         setTimeout(() => popup.classList.add('show'), 10);
-  
-        popup.querySelector('.popup-close').addEventListener('click', () => {
+    
+        const closeButton = popup.querySelector('.popup-close');
+        closeButton.addEventListener('click', () => {
           popup.classList.remove('show');
-          setTimeout(() => popup.remove(), 600);
+          setTimeout(() => popup.remove(), 500);
         });
-  
+    
         setTimeout(() => {
           if (popup.classList.contains('show')) {
             popup.classList.remove('show');
-            setTimeout(() => popup.remove(), 600);
+            setTimeout(() => popup.remove(), 500);
           }
-        }, 5000);
+        }, 5000); // Auto-close after 5 seconds
       }
-  
-      document.addEventListener('contextmenu', function (e) {
+    
+      // 22 Advanced Protection Mechanisms with Unique Popups
+      // 1. Right-click disabled
+      document.addEventListener('contextmenu', (e) => {
         e.preventDefault();
-        showCustomPopup("This Website Content is Protected!", "fas fa-ban");
+        showCustomPopup("This Website Content is Protected!", "fas fa-ban", "type-1");
       });
-  
-      document.addEventListener('selectstart', function (e) {
+    
+      // 2. Text selection disabled
+      document.addEventListener('selectstart', (e) => {
         e.preventDefault();
-        showCustomPopup("Text selection is disabled to protect content.", "fas fa-text-height");
+        showCustomPopup("Text selection is blocked!", "fas fa-text-height", "type-2");
       });
-  
-      document.addEventListener('copy', function (e) {
+    
+      // 3. Copy disabled
+      document.addEventListener('copy', (e) => {
         e.preventDefault();
-        showCustomPopup("Copying is disabled to protect content.", "fas fa-copy");
+        e.clipboardData.setData('text/plain', '');
+        showCustomPopup("Copying is not allowed!", "fas fa-copy", "type-3");
       });
-  
-      document.addEventListener('keydown', function (e) {
-        if (e.keyCode === 123 || (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 67)) || (e.ctrlKey && e.keyCode === 85) || (e.ctrlKey && e.keyCode === 83)) {
+    
+      // 4. Cut disabled
+      document.addEventListener('cut', (e) => {
+        e.preventDefault();
+        showCustomPopup("Cutting is prohibited!", "fas fa-cut", "type-4");
+      });
+    
+      // 5. Paste disabled
+      document.addEventListener('paste', (e) => {
+        e.preventDefault();
+        showCustomPopup("Pasting is restricted!", "fas fa-paste", "type-5");
+      });
+    
+      // 6. Inspect mode (F12, Ctrl+Shift+I, Ctrl+Shift+C, Ctrl+U) disabled
+      document.addEventListener('keydown', (e) => {
+        if (
+          e.key === 'F12' ||
+          (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'C')) ||
+          (e.ctrlKey && e.key === 'U')
+        ) {
           e.preventDefault();
-          showCustomPopup("Developer tools are disabled to protect content.", "fas fa-tools");
-          return false;
+          showCustomPopup("Inspect mode is disabled!", "fas fa-tools", "type-6");
         }
-        if (e.key === "PrintScreen" || (e.altKey && e.key === "PrintScreen") || (e.metaKey && e.shiftKey && (e.keyCode === 51 || e.keyCode === 52))) {
+      });
+    
+      // 7. Screenshot (PrintScreen) disabled
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'PrintScreen' || (e.altKey && e.key === 'PrintScreen')) {
           e.preventDefault();
-          showCustomPopup("Screenshots are discouraged to protect content.", "fas fa-camera");
-          if (navigator.clipboard) {
-            navigator.clipboard.writeText("").catch(err => console.error("Failed to clear clipboard:", err));
-          }
+          navigator.clipboard.writeText('').catch(() => {});
+          showCustomPopup("Screenshots are blocked!", "fas fa-camera", "type-7");
         }
       });
-  
-      document.addEventListener('dragstart', function (e) {
+    
+      // 8. Dragging content disabled
+      document.addEventListener('dragstart', (e) => {
         e.preventDefault();
-        showCustomPopup("Dragging content is disabled to protect it.", "fas fa-hand-paper");
+        showCustomPopup("Dragging is not permitted!", "fas fa-hand-paper", "type-8");
       });
-  
-      const watermark = document.createElement('div');
-      watermark.className = 'watermark';
-      watermark.innerHTML = '<a href="https://www.linkedin.com/in/imtahirnaseer" target="_blank">Developer Tahir</a>';
-      watermark.style.position = 'fixed';
-      watermark.style.bottom = '10px';
-      watermark.style.right = '10px';
-      watermark.style.fontSize = '14px';
-      watermark.style.pointerEvents = 'auto';
-      document.body.appendChild(watermark);
-  
+    
+      // 9. Ctrl+S (Save Page) disabled
+      document.addEventListener('keydown', (e) => {
+        if (e.ctrlKey && e.key === 'S') {
+          e.preventDefault();
+          showCustomPopup("Saving the page is restricted!", "fas fa-save", "type-9");
+        }
+      });
+    
+      // 10. Ctrl+P (Print) disabled
+      document.addEventListener('keydown', (e) => {
+        if (e.ctrlKey && e.key === 'P') {
+          e.preventDefault();
+          showCustomPopup("Printing is not allowed!", "fas fa-print", "type-10");
+        }
+      });
+    
+      // 11. Developer tools detection
       setInterval(() => {
         if (window.outerWidth - window.innerWidth > 200 || window.outerHeight - window.innerHeight > 200) {
-          showCustomPopup("Developer tools detected! Please close them to continue.", "fas fa-exclamation-triangle");
+          showCustomPopup("Developer tools detected!", "fas fa-exclamation-triangle", "type-11");
         }
       }, 1000);
+    
+      // 12. Window resize abuse prevention
+      let resizeCount = 0;
+      window.addEventListener('resize', () => {
+        resizeCount++;
+        if (resizeCount > 5) {
+          showCustomPopup("Excessive resizing detected!", "fas fa-expand", "type-12");
+          resizeCount = 0;
+        }
+      });
+    
+      // 13. Mouse double-click disabled
+      document.addEventListener('dblclick', (e) => {
+        e.preventDefault();
+        showCustomPopup("Double-clicking is disabled!", "fas fa-mouse-pointer", "type-13");
+      });
+    
+      // 14. Touch long press (mobile) disabled
+      document.addEventListener('touchstart', (e) => {
+        const touchTimer = setTimeout(() => {
+          e.preventDefault();
+          showCustomPopup("Long press is restricted!", "fas fa-hand-holding", "type-14");
+        }, 800);
+        document.addEventListener('touchend', () => clearTimeout(touchTimer), { once: true });
+      });
+    
+      // 15. Ctrl+A (Select All) disabled
+      document.addEventListener('keydown', (e) => {
+        if (e.ctrlKey && e.key === 'A') {
+          e.preventDefault();
+          showCustomPopup("Selecting all is blocked!", "fas fa-object-group", "type-15");
+        }
+      });
+    
+      // 16. F5 (Refresh) restricted
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'F5') {
+          e.preventDefault();
+          showCustomPopup("Refreshing is restricted!", "fas fa-sync-alt", "type-16");
+        }
+      });
+    
+      // 17. Backspace outside input disabled
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Backspace' && !['INPUT', 'TEXTAREA'].includes(e.target.tagName)) {
+          e.preventDefault();
+          showCustomPopup("Backspace navigation is disabled!", "fas fa-arrow-left", "type-17");
+        }
+      });
+    
+      // 18. Alt+Tab detection (mock)
+      document.addEventListener('keydown', (e) => {
+        if (e.altKey && e.key === 'Tab') {
+          e.preventDefault();
+          showCustomPopup("Switching tabs is monitored!", "fas fa-window-restore", "type-18");
+        }
+      });
+    
+      // 19. Ctrl+Shift+J (Console) disabled
+      document.addEventListener('keydown', (e) => {
+        if (e.ctrlKey && e.shiftKey && e.key === 'J') {
+          e.preventDefault();
+          showCustomPopup("Console access is blocked!", "fas fa-terminal", "type-19");
+        }
+      });
+    
+      // 20. Mouse wheel zoom (Ctrl + Scroll) disabled
+      document.addEventListener('wheel', (e) => {
+        if (e.ctrlKey) {
+          e.preventDefault();
+          showCustomPopup("Zooming with scroll is disabled!", "fas fa-search-plus", "type-20");
+        }
+      }, { passive: false });
+    
+      // 21. Window focus loss detection
+      window.addEventListener('blur', () => {
+        showCustomPopup("Please stay on this page!", "fas fa-eye", "type-21");
+      });
+    
+      // 22. Page unload prevention
+      window.addEventListener('beforeunload', (e) => {
+        e.preventDefault();
+        e.returnValue = '';
+        showCustomPopup("Leaving the page is restricted!", "fas fa-sign-out-alt", "type-22");
+      });
+    
+      // Additional Screenshot Protection
+      // Overlay to prevent screenshot visibility
+      const overlay = document.createElement('div');
+      overlay.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        z-index: 9998;
+        pointer-events: none;
+      `;
+      document.body.appendChild(overlay);
+    
+      // Watermark
+      const watermark = document.createElement('div');
+      watermark.className = 'watermark';
+      watermark.innerHTML = '<a href="https://yourwebsite.com" target="_blank"></a>';
+      document.body.appendChild(watermark);
     }
-  
+    
+    // Initialize protection
     addWebsiteProtection();
   
     /* Background Animation */
@@ -668,7 +778,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (chatContainer) chatContainer.appendChild(progressPopup);
   
     const qaDatabase = {
-      "what is your name": { male: "I'm Tahir, your virtual assistant!", female: "I'm Sheriya, your virtual assistant!" },
+      "what is your name": { male: "I'm Akanksha, your virtual assistant!", female: "I'm Sheriya, your virtual assistant!" },
       "what do you do": { male: "I assist with information, tasks, and can open websites. Ask me anything!", female: "I help with queries, tasks, and can launch websites. How can I assist you?" },
       "where are you from": { male: "I'm a digital entity created by xAI, no specific location!", female: "I'm a virtual assistant from xAI, existing in the digital realm!" },
       "what time is it": { male: `It's currently ${new Date().toLocaleTimeString()}.`, female: `The time is ${new Date().toLocaleTimeString()}.` },
@@ -712,7 +822,7 @@ document.addEventListener('DOMContentLoaded', function () {
           genderSelection.style.display = 'flex';
           micIcon.style.display = 'inline-block'; // Ensure mic is visible when assistant opens
           isAssistantActive = true;
-          const welcomeMsg = `Hello! I'm ${selectedGender === 'male' ? 'Tahir' : 'Sheriya'} your Virtual Assistant. How can I help you today? (Try "open YouTube", "tell me a joke", or "contact"!)`;
+          const welcomeMsg = `Hello! I'm ${selectedGender === 'male' ? 'Akanksha' : 'Sheriya'} your Virtual Assistant. How can I help you today? (Try "open YouTube", "tell me a joke", or "contact"!)`;
           addMessage('assistant', welcomeMsg);
           speak(welcomeMsg);
           userInput.focus();
@@ -723,7 +833,7 @@ document.addEventListener('DOMContentLoaded', function () {
         selectedGender = 'male';
         maleAssistant.classList.add('active');
         femaleAssistant.classList.remove('active');
-        const msg = "Hi, I'm Tahir! How can I assist you?";
+        const msg = "Hi, I'm Akanksha! How can I assist you?";
         chatContainer.innerHTML = '';
         addMessage('assistant', msg);
         speak(msg);
@@ -970,3 +1080,295 @@ document.addEventListener('DOMContentLoaded', function () {
     };
     window.addEventListener('scroll', handleScrollAnimation);
   });
+
+  document.addEventListener('DOMContentLoaded', () => {
+            // Theme Toggle
+            const themeToggle = document.querySelector('.theme-toggle');
+            const body = document.body;
+            const header = document.querySelector('header');
+
+            // Check for saved theme preference
+            if (localStorage.getItem('theme') === 'light') {
+                body.classList.add('light');
+                header.classList.add('light');
+                themeToggle.textContent = '☀️';
+            }
+
+            themeToggle.addEventListener('click', () => {
+                body.classList.toggle('light');
+                header.classList.toggle('light');
+                if (body.classList.contains('light')) {
+                    themeToggle.textContent = '☀️';
+                    localStorage.setItem('theme', 'light');
+                } else {
+                    themeToggle.textContent = '🌙';
+                    localStorage.setItem('theme', 'dark');
+                }
+            });
+
+            // Particle Animation System
+            const particleContainer = document.querySelector('.js-anim');
+            const particleCount = 100;
+
+            function createParticle() {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = `${Math.random() * 100}%`;
+                particle.style.top = `${Math.random() * 100}%`;
+                particle.style.animationDelay = `${Math.random() * 2.5}s`;
+                particle.style.animationDuration = `${1.5 + Math.random() * 2}s`;
+                const moveX = (Math.random() - 0.5) * 300;
+                const moveY = (Math.random() - 0.5) * 300;
+                particle.style.setProperty('--x', `${moveX}px`);
+                particle.style.setProperty('--y', `${moveY}px`);
+                particleContainer.appendChild(particle);
+
+                particle.addEventListener('animationend', () => {
+                    particle.remove();
+                    createParticle();
+                });
+            }
+
+            for (let i = 0; i < particleCount; i++) {
+                createParticle();
+            }
+
+            // Skills Icons Interaction
+            const skillsIcons = document.querySelector('.skills-icons');
+            const skillItems = document.querySelectorAll('.skills-icons li');
+            let rotationPaused = false;
+
+            skillsIcons.addEventListener('mouseenter', () => {
+                rotationPaused = true;
+                skillsIcons.style.animationPlayState = 'paused';
+            });
+
+            skillsIcons.addEventListener('mouseleave', () => {
+                rotationPaused = false;
+                skillsIcons.style.animationPlayState = 'running';
+            });
+
+            // // Dynamic Title Animation
+            // const title = document.querySelector('.glow-bg h1');
+            // let hue = 0;
+
+            // function animateTitle() {
+            //     hue = (hue + 1) % 360;
+            //     title.style.textShadow = body.classList.contains('light') ?
+            //         `0 0 20px hsl(${hue}, 80%, 40%), 0 0 40px hsl(${hue}, 80%, 30%), 0 0 60px hsl(${hue}, 80%, 20%)` :
+            //         `0 0 20px hsl(${hue}, 100%, 50%), 0 0 40px hsl(${hue}, 100%, 40%), 0 0 60px hsl(${hue}, 100%, 30%)`;
+            //     requestAnimationFrame(animateTitle);
+            // }
+
+            // animateTitle();
+
+            // 3D Tilt Effect on Hover
+            skillItems.forEach(item => {
+                item.addEventListener('mousemove', (e) => {
+                    const rect = item.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    const rotateX = (y - centerY) / 15;
+                    const rotateY = (centerX - x) / 15;
+
+                    item.style.transform = `
+                        rotateY(calc(var(--i) * 45deg))
+                        translateZ(clamp(250px, 40vw, 450px))
+                        scale(1.3)
+                        rotateX(${rotateX}deg)
+                        rotateY(${rotateY}deg)
+                    `;
+                });
+
+                item.addEventListener('mouseleave', () => {
+                    item.style.transform = `rotateY(calc(var(--i) * 45deg)) translateZ(clamp(200px, 35vw, 400px))`;
+                });
+
+                // Touch Support
+                item.addEventListener('touchstart', (e) => {
+                    e.preventDefault();
+                    item.style.transform = `rotateY(calc(var(--i) * 45deg)) translateZ(clamp(250px, 40vw, 450px)) scale(1.3)`;
+                });
+
+                item.addEventListener('touchend', () => {
+                    item.style.transform = `rotateY(calc(var(--i) * 45deg)) translateZ(clamp(200px, 35vw, 400px))`;
+                });
+            });
+
+            // Scroll Animation for Particles
+            let lastScroll = 0;
+            const throttleDelay = 100;
+
+            window.addEventListener('scroll', () => {
+                const now = Date.now();
+                if (now - lastScroll >= throttleDelay) {
+                    lastScroll = now;
+                    const particles = document.querySelectorAll('.particle');
+                    particles.forEach(p => {
+                        p.style.transform = `translate(${Math.random() * 10 - 5}px, ${Math.random() * 10 - 5}px)`;
+                    });
+                }
+            });
+
+            // Dynamic Resize Handling
+            let resizeTimeout;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(() => {
+                    const particles = document.querySelectorAll('.particle');
+                    particles.forEach(particle => {
+                        particle.style.left = `${Math.random() * 100}%`;
+                        particle.style.top = `${Math.random() * 100}%`;
+                    });
+                }, 150);
+            });
+
+            // Intersection Observer for Lazy Loading
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        skillsIcons.style.opacity = '1';
+                        skillsIcons.style.transform = 'scale(1)';
+                    } else {
+                        skillsIcons.style.opacity = '0';
+                        skillsIcons.style.transform = 'scale(0.95)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            observer.observe(document.querySelector('#skills'));
+
+            // Initial Animation Setup
+            skillsIcons.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            skillsIcons.style.opacity = '0';
+            skillsIcons.style.transform = 'scale(0.95)';
+        });// Scoped script for Skills section only
+        (function() {
+            const skillsSection = document.querySelector('#skills');
+            if (!skillsSection) return;
+
+            document.addEventListener('DOMContentLoaded', () => {
+               
+
+                // Particle Animation
+                const particleContainer = skillsSection.querySelector('.js-anim');
+                const particleCount = 50;
+
+                function createParticle() {
+                    const particle = document.createElement('div');
+                    particle.className = 'particle';
+                    particle.style.left = `${Math.random() * 100}%`;
+                    particle.style.top = `${Math.random() * 100}%`;
+                    particle.style.animationDelay = `${Math.random() * 2.5}s`;
+                    particle.style.animationDuration = `${1.5 + Math.random() * 2}s`;
+                    const moveX = (Math.random() - 0.5) * 200;
+                    const moveY = (Math.random() - 0.5) * 200;
+                    particle.style.setProperty('--x', `${moveX}px`);
+                    particle.style.setProperty('--y', `${moveY}px`);
+                    particleContainer.appendChild(particle);
+
+                    particle.addEventListener('animationend', () => {
+                        particle.remove();
+                        createParticle();
+                    });
+                }
+
+                for (let i = 0; i < particleCount; i++) {
+                    createParticle();
+                }
+
+                // Skills Icons Interaction
+                const skillsIcons = skillsSection.querySelector('.skills-icons');
+                const skillItems = skillsSection.querySelectorAll('.skills-icons li');
+
+                skillsIcons.addEventListener('mouseenter', () => {
+                    skillsIcons.style.animationPlayState = 'paused';
+                });
+
+                skillsIcons.addEventListener('mouseleave', () => {
+                    skillsIcons.style.animationPlayState = 'running';
+                });
+
+                // 3D Tilt Effect
+                skillItems.forEach(item => {
+                    item.addEventListener('mousemove', (e) => {
+                        const rect = item.getBoundingClientRect();
+                        const x = e.clientX - rect.left;
+                        const y = e.clientY - rect.top;
+                        const centerX = rect.width / 2;
+                        const centerY = rect.height / 2;
+                        const rotateX = (y - centerY) / 15;
+                        const rotateY = (centerX - x) / 15;
+
+                        item.style.transform = `
+                            rotateY(calc(var(--i) * 45deg))
+                            translateZ(clamp(200px, 35vw, 400px))
+                            scale(1.3)
+                            rotateX(${rotateX}deg)
+                            rotateY(${rotateY}deg)
+                        `;
+                    });
+
+                    item.addEventListener('mouseleave', () => {
+                        item.style.transform = `rotateY(calc(var(--i) * 45deg)) translateZ(clamp(150px, 30vw, 350px))`;
+                    });
+
+                    // Touch Support
+                    item.addEventListener('touchstart', (e) => {
+                        e.preventDefault();
+                        item.style.transform = `rotateY(calc(var(--i) * 45deg)) translateZ(clamp(200px, 35vw, 400px)) scale(1.3)`;
+                    });
+
+                    item.addEventListener('touchend', () => {
+                        item.style.transform = `rotateY(calc(var(--i) * 45deg)) translateZ(clamp(150px, 30vw, 350px))`;
+                    });
+                });
+
+                // // Title Animation
+                // const title = skillsSection.querySelector('.glow-bg h1');
+                // let hue = 0;
+
+                // function animateTitle() {
+                //     hue = (hue + 1) % 360;
+                //     title.style.textShadow = skillsSection.classList.contains('light') ?
+                //         `0 0 15px hsl(${hue}, 80%, 40%)` :
+                //         `0 0 15px hsl(${hue}, 100%, 50%)`;
+                //     requestAnimationFrame(animateTitle);
+                // }
+
+                // animateTitle();
+
+                // Resize Handling
+                let resizeTimeout;
+                window.addEventListener('resize', () => {
+                    clearTimeout(resizeTimeout);
+                    resizeTimeout = setTimeout(() => {
+                        const particles = skillsSection.querySelectorAll('.particle');
+                        particles.forEach(particle => {
+                            particle.style.left = `${Math.random() * 100}%`;
+                            particle.style.top = `${Math.random() * 100}%`;
+                        });
+                    }, 150);
+                });
+            });
+        })();
+         // Wait for the document to load
+    document.addEventListener('DOMContentLoaded', function() {
+      const timelineItems = document.querySelectorAll('.timeline-item');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+          } else {
+            entry.target.classList.remove('in-view');
+          }
+        });
+      }, {
+        threshold: 0.5 // Trigger when 50% visible
+      });
+      timelineItems.forEach(item => observer.observe(item));
+    });
+
+    
