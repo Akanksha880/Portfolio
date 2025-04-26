@@ -17,7 +17,12 @@ This is a highly advanced and fully responsive website designed with modern UI/U
 - 📌 **Protected Content**
 - ⚡ **Optimized for Performance & Speed**
 
-
+## 📂 Sections Preview
+- **About Page** ![About](./assets/aboutpage.png)
+- **Portfolio Section** ![Portfolio](./assets/portfoliosection.png)
+- **Contact & VA Section** ![Contact](./assets/contact&VA.png)
+- **Footer Section** ![Footer](./assets/footersection.png)
+- **Protected Content** ![Protected](./assets/protectedcontent.png)
 
 
 ## Table of Contents
@@ -150,7 +155,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ---
 
 ```
-✨ **Developed by Tahir Naseer** ✨
+✨ **Developed by Akanksha Kotwal** ✨
 ```
 
 *Created by Akanksha Kotwal | Last Updated: March 18, 2025*
