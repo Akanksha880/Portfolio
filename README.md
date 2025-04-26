@@ -79,7 +79,7 @@ portfolio/
 ## Setup Instructions
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/portfolio.git
+   git clone https://github.com/Akanksha880/portfolio.git
    ```
 2. **Navigate to the Project Directory**:
    ```bash
@@ -142,10 +142,9 @@ Open `index.html` in your browser or use Live Server.
 
 ## Contact
 - **Name**: Akanksha Kotwal
-- **Email**: [Insert your email here]
+- **Email**: [2022a1r168@mietjammu.in]
 - **LinkedIn**: [linkedin.com/in/akanksha-kotwal-b3b008256](https://www.linkedin.com/in/akanksha-kotwal-b3b008256)
-- **GitHub**: [Insert your GitHub profile here]
-- **Twitter**: [Insert your Twitter handle here]
+- **GitHub**: [Akanksha](https://github.com/Akanksha880])
 
 Feel free to reach out via the contact form on the website or directly through LinkedIn!
 
